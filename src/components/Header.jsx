@@ -1,7 +1,10 @@
 
 import { assets } from "../assets/assets";
+import { useNavigate } from "react-router-dom";
+
 
 const Header = () => {
+   const navigate = useNavigate();
   return (
     <div className="flex flex-col md:flex-row flex-wrap bg-primary rounded-lg px-6 md:px-10 lg:px-20">
       {/* Left Side */}
@@ -17,13 +20,12 @@ const Header = () => {
             schedule your appointment hassle-free.
           </p>
         </div>
-        <a
-          href="#speciality"
-          className="flex items-center gap-2 bg-white px-8 py-3 rounded-full text-gray-600 text-sm m-auto md:m-0 hover:scale-105 transition-all duration-300"
+        <button
+          onClick={() => navigate("/doctors")}
+          className="flex items-center gap-2 bg-white px-8 py-3 rounded-full text-gray-600 hover:scale-105 transition-all"
         >
-          Book Appointment{" "}
-          <img className="w-3" src={assets.arrow_icon} alt="arrow_icon" />
-        </a>
+          Book Appointment
+        </button>
       </div>
 
       {/* Right Side */}

@@ -23,8 +23,8 @@ const Contact = () => {
           </p>
 
           <p className="text-gray-500">
-            Tel: +92 300 0000000 <br />
-            Email: info@dentacare.pk
+            Tel: +92300-1234567<br />
+            Email: dentacare@example.com
           </p>
 
           <p className="font-semibold text-lg text-gray-600">
@@ -34,10 +34,17 @@ const Contact = () => {
             Join our team of professional dentists and staff dedicated to excellent patient care.
           </p>
 
-          <button className="border border-black px-8 py-4 text-md hover:bg-black hover:text-white transition-all duration-500">
-            Explore Jobs
-          </button>
+          <span className="text-gray-700 text-sm md:text-base">
+            <span className="font-medium">Email:</span>{" "}
+            <a
+              href="mailto:careers.dentacare@example.com"
+              className="text-primary hover:underline"
+            >
+              careers.dentacare@example.com
+            </a>
+          </span>
         </div>
+        
       </div>
     </div>
   );

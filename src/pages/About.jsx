@@ -1,68 +1,81 @@
-
 import { assets } from "../assets/assets";
 
 const About = () => {
   return (
     <div>
+      {/* ABOUT US */}
       <div className="text-center text-2xl pt-10 text-gray-500">
         <p>
           ABOUT <span className="text-gray-700 font-medium">US</span>
         </p>
       </div>
+
       <div className="my-10 flex flex-col md:flex-row gap-12">
         <img
           src={assets.about_image}
-          alt=""
-          className="w-full md:max-w-[360px]"
+          alt="DentaCare Clinic"
+          className="w-full md:max-w-[360px] rounded-lg shadow-sm"
         />
+
         <div className="flex flex-col justify-center gap-6 md:w-2/4 text-lg text-gray-600">
           <p>
-            Welcome to <span className="text-primary font-semibold">DentaCare</span>, your trusted destination for complete dental care and oral health solutions. 
-            At DentaCare, we understand the importance of a healthy smile and the confidence it brings to your everyday life. 
-            Our clinic is dedicated to providing comfortable, reliable, and stress-free dental treatments for patients of all ages.
+            Welcome to{" "}
+            <span className="text-primary font-semibold">DentaCare</span>, a
+            modern dental clinic committed to protecting your smile and
+            enhancing your confidence. We believe that great dental care goes
+            beyond treatment — it’s about trust, comfort, and long-term oral
+            health.
           </p>
 
           <p>
-            With a focus on compassionate care and modern dentistry, DentaCare delivers exceptional services ranging from routine checkups 
-            and cleanings to advanced procedures like root canals, cosmetic dentistry, and orthodontics. 
-            Our mission is to ensure every patient feels relaxed, informed, and confident in their treatment journey.
+            At DentaCare, we provide a complete range of dental services, from
+            routine checkups and preventive care to advanced treatments such as
+            cosmetic dentistry, root canals, and orthodontics. Our experienced
+            dentists combine clinical expertise with a gentle approach to
+            ensure every visit is calm, informative, and stress-free.
           </p>
 
           <strong className="text-gray-800">Our Vision</strong>
 
           <p>
-            Our vision at DentaCare is to make quality dental care accessible, affordable, and personalized. 
-            We aim to bridge the gap between patients and professional dental care by offering a seamless experience — 
-            from booking your appointment to receiving long-term oral health support. 
-            Your smile is our passion, and we’re here to help you protect it with care you can trust.
+            Our vision is to redefine the dental care experience by making it
+            accessible, transparent, and patient-centered. We strive to build
+            lifelong relationships with our patients by offering personalized
+            treatment plans, honest guidance, and continuous support for
+            long-term oral wellness.
           </p>
         </div>
       </div>
 
-      <div className="text-xl my-4 text-gray-400">
+      {/* WHY CHOOSE US */}
+      <div className="text-xl my-6 text-gray-400 text-center md:text-left">
         <p>
           WHY <span className="text-gray-700 font-semibold">CHOOSE US</span>
         </p>
       </div>
+
       <div className="flex flex-col md:flex-row mb-20">
-        <div className="hover:text-white hover:bg-primary border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] transition-all duration-300 text-gray-600 cursor-pointer">
-          <strong>EXPERT DENTISTS:</strong>
+        <div className="hover:text-white hover:bg-primary border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-4 text-[15px] transition-all duration-300 text-gray-600 cursor-pointer">
+          <strong>EXPERIENCED DENTISTS</strong>
           <p>
-            Receive treatment from highly qualified and experienced dental professionals dedicated to your smile.
+            Our skilled dental professionals bring years of experience and a
+            patient-first approach to every treatment.
           </p>
         </div>
 
-        <div className="hover:text-white hover:bg-primary border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] transition-all duration-300 text-gray-600 cursor-pointer">
-          <strong>ADVANCED TECHNOLOGY:</strong>
+        <div className="hover:text-white hover:bg-primary border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-4 text-[15px] transition-all duration-300 text-gray-600 cursor-pointer">
+          <strong>MODERN TECHNOLOGY</strong>
           <p>
-            Benefit from modern dental equipment and painless treatment techniques for a more comfortable experience.
+            We use advanced dental technology and minimally invasive techniques
+            to ensure precise, comfortable, and effective care.
           </p>
         </div>
 
-        <div className="hover:text-white hover:bg-primary border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] transition-all duration-300 text-gray-600 cursor-pointer">
-          <strong>PERSONALIZED CARE:</strong>
+        <div className="hover:text-white hover:bg-primary border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-4 text-[15px] transition-all duration-300 text-gray-600 cursor-pointer">
+          <strong>PATIENT-CENTERED CARE</strong>
           <p>
-            Enjoy customized dental treatment plans designed specifically for your oral health needs and goals.
+            Every smile is unique. We tailor each treatment plan to your
+            specific needs, goals, and comfort.
           </p>
         </div>
       </div>

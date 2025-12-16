@@ -10,6 +10,7 @@ import Contact from "./pages/Contact.jsx";
 import Appointments from "./pages/Appointments.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
+import SpecialityMenu from "./components/SpecialityMenu.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
