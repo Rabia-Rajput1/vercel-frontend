@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { assets } from "../assets/assets.js";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext.jsx";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -15,9 +16,11 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between text-lg1 py-4 mb-5 border-b border-b-gray-400">
-      <h2 className="cursor-pointer font-light text-2xl uppercase text-gray-700">
-        Denta <span className="font-semibold text-[#20AFC0]">Care</span>
-      </h2>
+      <Link to="/" className="cursor-pointer">
+        <h2 className="font-light text-2xl uppercase text-gray-700">
+          Denta <span className="font-semibold text-[#20AFC0]">Care</span>
+        </h2>
+      </Link>
       <ul className="hidden md:flex items-start gap-5 font-medium">
         <NavLink to="/">
           <li className="py-1">Home</li>
@@ -96,9 +99,11 @@ const Navbar = () => {
           } md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}
         >
           <div className="flex items-center justify-between px-5 py-6">
-            <h2 className="cursor-pointer font-light text-2xl uppercase text-gray-700">
+          <Link to="/" className="cursor-pointer">
+            <h2 className="font-light text-2xl uppercase text-gray-700">
               Denta <span className="font-semibold text-[#20AFC0]">Care</span>
             </h2>
+          </Link>
             <img
               onClick={() => setShowMenu(false)}
               className="w-7"
