@@ -12,10 +12,7 @@ const Footer = () => {
           Denta <span className="font-semibold text-[#20AFC0]">Care</span>
         </h2>
           <p className="w-full md:w-2/3 text-gray-600 leading-6">
-            {`Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.`}
+            DentaCare is dedicated to providing top-quality dental care services with a focus on patient comfort and oral health. Our team of experienced dentists combines modern techniques and compassionate care to ensure a healthy and confident smile for every patient.
           </p>
         </div>
         {/* Center Section */}
