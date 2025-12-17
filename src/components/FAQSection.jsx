@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 
 const faqs = [
   {
@@ -23,19 +23,46 @@ const faqs = [
   },
 ];
 
-
 const FAQSection = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
-    <div className="py-12">
-      <h2 className="text-3xl font-semibold text-center mb-8">
+    <div className="py-12 max-w-4xl mx-auto">
+      <h2 className="text-3xl font-semibold text-center mb-10">
         Frequently Asked Questions
       </h2>
 
       <div className="space-y-4">
         {faqs.map((item, i) => (
-          <div key={i} className="border p-5 rounded-xl bg-white">
-            <h3 className="font-semibold text-lg">{item.q}</h3>
-            <p className="text-gray-600 mt-1">{item.a}</p>
+          <div
+            key={i}
+            className="border rounded-xl bg-white overflow-hidden"
+          >
+            {/* Question */}
+            <button
+              onClick={() => toggleFAQ(i)}
+              className="w-full flex justify-between items-center p-5 text-left font-semibold text-lg hover:bg-gray-50 transition"
+            >
+              {item.q}
+              <span className="text-primary text-2xl">
+                {activeIndex === i ? "−" : "+"}
+              </span>
+            </button>
+
+            {/* Answer */}
+            <div
+              className={`px-5 text-gray-600 text-[15px] leading-relaxed transition-all duration-300 ${
+                activeIndex === i
+                  ? "max-h-96 pb-5 opacity-100"
+                  : "max-h-0 opacity-0"
+              } overflow-hidden`}
+            >
+              {item.a}
+            </div>
           </div>
         ))}
       </div>
