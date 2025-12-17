@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { assets } from "../assets/assets";
 
 const services = [
   {
@@ -6,21 +7,21 @@ const services = [
     desc: "Brighten your smile with safe and effective whitening treatments.",
     details:
       "Our professional teeth whitening removes deep stains caused by food, coffee, and smoking. The procedure is safe, quick, and delivers long-lasting results.",
-    img: "https://img.icons8.com/?size=100&id=59895&format=png&color=000000",
+    img: assets.TeethWhitening,
   },
   {
     title: "Dental Implants",
     desc: "Replace missing teeth with long-lasting premium implants.",
     details:
       "Dental implants provide a permanent solution for missing teeth. They restore natural appearance, improve chewing, and prevent bone loss.",
-    img: "https://img.icons8.com/?size=100&id=59898&format=png&color=000000",
+    img: assets.DentalImplant,
   },
   {
     title: "Root Canal",
     desc: "Painless and fast root canal procedures by specialists.",
     details:
       "Our advanced root canal treatment removes infection while preserving your natural tooth. Modern techniques ensure minimal discomfort and quick recovery.",
-    img: "https://img.icons8.com/?size=100&id=23809&format=png&color=000000",
+    img: assets.RootCanal,
   },
 ];
 

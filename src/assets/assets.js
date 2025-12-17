@@ -36,6 +36,10 @@ import General_physician from "./General_physician.svg";
 import Gynecologist from "./Gynecologist.svg";
 import Neurologist from "./Neurologist.svg";
 import Pediatricians from "./Pediatricians.svg";
+import DentalImplant from "./dental_implant.png";
+import TeethWhitening from "./teeth_whitening.png";
+import RootCanal from "./root_canal.png";
+
 
 export const assets = {
   appointment_img,
@@ -55,6 +59,10 @@ export const assets = {
   upload_icon,
   stripe_logo,
   razorpay_logo,
+  DentalImplant,
+  TeethWhitening,
+  RootCanal
+ 
 };
 
 export const specialityData = [

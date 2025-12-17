@@ -1,4 +1,6 @@
 import { assets } from "../assets/assets";
+import FAQSection from "../components/FAQSection";
+import ServicesSection from "../components/ServicesSection";
 
 const About = () => {
   return (
@@ -47,6 +49,8 @@ const About = () => {
         </div>
       </div>
 
+      <ServicesSection/>
+
       {/* WHY CHOOSE US */}
       <div className="text-xl my-6 text-gray-400 text-center md:text-left">
         <p>
@@ -54,31 +58,44 @@ const About = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row mb-20">
-        <div className="hover:text-white hover:bg-primary border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-4 text-[15px] transition-all duration-300 text-gray-600 cursor-pointer">
-          <strong>EXPERIENCED DENTISTS</strong>
-          <p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        {/* Card 1 */}
+        <div className="group bg-white border rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer hover:bg-primary">
+          <strong className="block mb-3 text-gray-700 group-hover:text-white text-sm tracking-wide">
+            EXPERIENCED DENTISTS
+          </strong>
+          <p className="text-gray-600 group-hover:text-white text-[15px] leading-relaxed">
             Our skilled dental professionals bring years of experience and a
             patient-first approach to every treatment.
           </p>
         </div>
 
-        <div className="hover:text-white hover:bg-primary border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-4 text-[15px] transition-all duration-300 text-gray-600 cursor-pointer">
-          <strong>MODERN TECHNOLOGY</strong>
-          <p>
+        {/* Card 2 */}
+        <div className="group bg-white border rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer hover:bg-primary">
+          <strong className="block mb-3 text-gray-700 group-hover:text-white text-sm tracking-wide">
+            MODERN TECHNOLOGY
+          </strong>
+          <p className="text-gray-600 group-hover:text-white text-[15px] leading-relaxed">
             We use advanced dental technology and minimally invasive techniques
             to ensure precise, comfortable, and effective care.
           </p>
         </div>
 
-        <div className="hover:text-white hover:bg-primary border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-4 text-[15px] transition-all duration-300 text-gray-600 cursor-pointer">
-          <strong>PATIENT-CENTERED CARE</strong>
-          <p>
+        {/* Card 3 */}
+        <div className="group bg-white border rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer hover:bg-primary">
+          <strong className="block mb-3 text-gray-700 group-hover:text-white text-sm tracking-wide">
+            PATIENT-CENTERED CARE
+          </strong>
+          <p className="text-gray-600 group-hover:text-white text-[15px] leading-relaxed">
             Every smile is unique. We tailor each treatment plan to your
             specific needs, goals, and comfort.
           </p>
         </div>
       </div>
+      <FAQSection/>
+
+
+
     </div>
   );
 };
