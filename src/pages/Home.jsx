@@ -7,7 +7,6 @@ import ServicesSection from "../components/ServicesSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Testimonials from "../components/Testimonials";
 import FAQSection from "../components/FAQSection";
-import SpecialityMenu from "../components/SpecialityMenu";
 
 const Home = () => {
   return (
