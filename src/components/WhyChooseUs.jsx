@@ -1,12 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const WhyChooseUs = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleCard = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   const items = [
     {
       title: "🦷 Expert Dentists",
@@ -35,38 +29,31 @@ const WhyChooseUs = () => {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-        {items.map((item, index) => {
-          const isActive = activeIndex === index;
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="group cursor-pointer p-6 border rounded-xl bg-white
+                       overflow-hidden
+                       transition-all duration-300
+                       hover:shadow-lg hover:h-auto"
+          >
+            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+            <p className="text-gray-600">{item.short}</p>
 
-          return (
+            {/* Hover Content */}
             <div
-              key={index}
-              onClick={() => toggleCard(index)}
-              className={`cursor-pointer p-6 border rounded-xl transition-all duration-300 hover:shadow-lg
-                ${isActive ? "h-auto" : "h-200"}
-              `}
+              className="overflow-hidden
+                         max-h-0 opacity-0 mt-0
+                         transition-all duration-300
+                         group-hover:max-h-40
+                         group-hover:opacity-100
+                         group-hover:mt-4"
             >
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600">{item.short}</p>
-
-              {/* Dropdown Content */}
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  isActive
-                    ? "max-h-40 opacity-100 mt-4"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <p className="text-gray-500 text-sm">{item.details}</p>
-              </div>
+              <p className="text-gray-500 text-sm">{item.details}</p>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
-
-
-
-
     </div>
   );
 };

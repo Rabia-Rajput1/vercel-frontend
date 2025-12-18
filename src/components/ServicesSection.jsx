@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { assets } from "../assets/assets";
 
 const services = [
@@ -26,59 +26,50 @@ const services = [
 ];
 
 const ServicesSection = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleCard = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
     <div className="py-12">
       <h2 className="text-3xl font-semibold text-center mb-8">
         Our Dental Services
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start ">
-        {services.map((service, i) => {
-          const isActive = activeIndex === i;
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+        {services.map((service, i) => (
+          <div
+            key={i}
+            className="group cursor-pointer p-6 border rounded-xl bg-white
+                       h-[230px] overflow-hidden
+                       transition-all duration-300
+                       hover:shadow-lg hover:h-auto"
+          >
+            <img
+              src={service.img}
+              alt={service.title}
+              className="w-16 mx-auto mb-4"
+            />
 
-          return (
+            <h3 className="text-xl font-medium text-center">
+              {service.title}
+            </h3>
+
+            <p className="text-gray-600 text-center mt-2">
+              {service.desc}
+            </p>
+
+            {/* Hover Content */}
             <div
-              key={i}
-              onClick={() => toggleCard(i)}
-              className={`cursor-pointer p-6 border rounded-xl bg-white transition-all duration-300
-                ${isActive ? "h-auto shadow-lg" : "h-[230px] hover:shadow-md"}
-              `}
+              className="overflow-hidden text-center
+                         max-h-0 opacity-0 mt-0
+                         transition-all duration-300
+                         group-hover:max-h-40
+                         group-hover:opacity-100
+                         group-hover:mt-4"
             >
-              <img
-                src={service.img}
-                alt={service.title}
-                className="w-16 mx-auto mb-4"
-              />
-
-              <h3 className="text-xl font-medium text-center">
-                {service.title}
-              </h3>
-
-              <p className="text-gray-600 text-center mt-2">
-                {service.desc}
+              <p className="text-gray-500 text-sm">
+                {service.details}
               </p>
-
-              {/* Dropdown Content */}
-              <div
-                className={`overflow-hidden transition-all duration-300 text-center ${
-                  isActive
-                    ? "max-h-40 opacity-100 mt-4"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <p className="text-gray-500 text-sm">
-                  {service.details}
-                </p>
-              </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );
